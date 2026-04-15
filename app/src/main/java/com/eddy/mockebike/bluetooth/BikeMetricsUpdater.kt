@@ -5,7 +5,7 @@ import android.os.Looper
 import com.eddy.mockebike.domain.BikeAction
 import com.eddy.mockebike.domain.BikeBus
 
-/** Owns the periodic update loop while the foreground service is alive. */
+/** 포그라운드 서비스가 살아있는 동안, 주기적으로 metrics를 갱신한다. */
 class BikeMetricsUpdater(
     private val bikeBus: BikeBus,
     private val heartRateNotificationManager: HeartRateNotificationManager,

@@ -19,13 +19,13 @@ fun LeftPointingTriangle(
         val height = size.height
 
         val path = Path().apply {
-            moveTo(width * 0.8f, height * 0.1f)  // Top right
-            lineTo(width * 0.8f, height * 0.9f)  // Bottom right
-            lineTo(width * 0.2f, height * 0.5f)  // Middle left
-            close()  // Back to start
+            moveTo(width * 0.8f, height * 0.1f)  // 우상단
+            lineTo(width * 0.8f, height * 0.9f)  // 우하단
+            lineTo(width * 0.2f, height * 0.5f)  // 좌중앙
+            close()  // 시작점으로
         }
 
-        // Fill the triangle
+        // 삼각형 채우기
         drawPath(
             path = path,
             color = color
@@ -33,7 +33,7 @@ fun LeftPointingTriangle(
     }
 }
 
-// Usage example
+// 사용 예시
 @Preview(showBackground = true)
 @Composable
 fun TriangleExample() {

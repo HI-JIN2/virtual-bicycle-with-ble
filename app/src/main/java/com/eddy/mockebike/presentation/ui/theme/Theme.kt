@@ -35,7 +35,7 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun MockEBikeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
+    // Dynamic color는 Android 12+에서 지원
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {

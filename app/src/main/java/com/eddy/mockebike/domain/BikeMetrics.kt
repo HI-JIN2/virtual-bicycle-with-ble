@@ -1,6 +1,6 @@
 package com.eddy.mockebike.domain
 
-/** Domain snapshot (not UI state). */
+/** 도메인 스냅샷(UI state 아님). */
 data class BikeMetrics(
     val distance: Float = 0.0f,
     val speed: Float = 0.0f,

@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 /**
- * Unidirectional state bus: accepts actions, reduces into domain metrics.
- * UI derives its UiState in ViewModel.
+ * 단방향 상태 버스: 액션을 받아 도메인 상태(bike metrics)로 reduce 한다.
+ * UI는 ViewModel에서 UiState로 투영(projection)한다.
  */
 class BikeBus {
 

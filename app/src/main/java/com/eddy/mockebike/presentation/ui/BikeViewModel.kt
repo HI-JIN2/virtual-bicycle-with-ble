@@ -18,7 +18,7 @@ class BikeViewModel : ViewModel() {
     val uiState: StateFlow<BikeUiState> = _uiState.asStateFlow()
 
     init {
-        // Domain -> UI projection: ViewModel owns UiState.
+        // Domain -> UI 투영: ViewModel이 UiState를 소유한다.
         viewModelScope.launch {
             bikeBus.state.collect { s ->
                 _uiState.update {

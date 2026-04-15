@@ -26,12 +26,12 @@ class MainActivity : ComponentActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         checkPermission()
 
-        // Real foreground service (keeps running when screen is off).
+        // 실제 Foreground Service로 실행(화면이 꺼져도 계속 동작).
         BluetoothService.start(this)
 
         setContent {
             MockEBikeTheme {
-                // A surface container using the 'background' color from the theme
+                // Theme background를 사용하는 Surface
                 BikeRoute(bikeViewModel)
             }
         }

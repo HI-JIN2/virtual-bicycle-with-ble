@@ -16,13 +16,13 @@ import kotlinx.coroutines.delay
 @Composable
 fun AnimatedImage(
     modifier: Modifier = Modifier,
-    speed: Float = 1f // Speed value (controls the animation speed)
+    speed: Float = 1f // 속도(애니메이션 속도 조절)
 ) {
     val frameCount = 115 //총 프레임은 115이지만 59면 한 사이클을 돈다
-    val baseDuration = 1000 / 24 // Base duration for 24 fps
+    val baseDuration = 1000 / 24 // 24fps 기준 프레임 시간
     val context = LocalContext.current
 
-    // Image list
+    // 이미지 목록
     val images = (1..frameCount).map { frameNumber ->
         val formattedFrameNumber = String.format("%03d", frameNumber)
         painterResource(
@@ -46,7 +46,7 @@ fun AnimatedImage(
     val currentFrame = remember { mutableStateOf(0) }
 
     // 애니메이션 업데이트를 위한 LaunchedEffect
-    LaunchedEffect(speed) { // speed를 키로 사용
+    LaunchedEffect(speed) { // speed가 바뀌면 루프 재시작
         while (speed > 0) { // speed가 0이 아닌 동안만 루프 실행
             // 프레임 업데이트
             currentFrame.value = (currentFrame.value + 1) % frameCount
