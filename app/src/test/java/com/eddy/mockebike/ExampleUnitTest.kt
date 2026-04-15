@@ -1,4 +1,4 @@
-package com.eddy.nrf
+package com.eddy.mockebike
 
 import org.junit.Test
 
