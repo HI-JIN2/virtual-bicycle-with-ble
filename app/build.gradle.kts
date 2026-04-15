@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.eddy.nrf"
+    namespace = "com.eddy.mockebike"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.eddy.nrf"
+        applicationId = "com.eddy.mockebike"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
